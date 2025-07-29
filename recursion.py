@@ -45,3 +45,7 @@ def reverse(node):
 
 
 reverse(Head)
+
+# reverse array
+def array_reverse():
+    pass
