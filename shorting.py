@@ -46,4 +46,4 @@ def insertionShort(arr):
 
     return arr
 
-print(insertionShort(a))
+# print(insertionShort(a))
