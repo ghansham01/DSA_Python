@@ -81,12 +81,27 @@ def FizzBuzz():
 # print(FizzBuzz())
 
 # Calculate factorial using only loops.
-def factorial():
-    pass
+def factorial(num):
+    calculate = 1
+    for i in range(2,num+1):
+        calculate *=i
 
+    return calculate
+
+# print(factorial(5))
 # Reverse a given string without using slicing ([::-1]).
 def Reverse_String():
-    pass
+    text = input("Enter the strings: ")
+    
+    reversed_text = ""
+
+# Loop through each character
+    for char in text:
+        reversed_text = char + reversed_text   # prepend character
+    
+    return reversed_text
+
+# print(f'reverse the string: {Reverse_String()}')
 
 # Check if a password is at least 8 chars long, contains a digit, uppercase, lowercase, and special character.
 def passwordChaker():
