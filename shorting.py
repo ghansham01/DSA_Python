@@ -47,3 +47,46 @@ def insertionShort(arr):
     return arr
 
 # print(insertionShort(a))
+
+# Merge sort
+# Time complexity:- O(n log n)
+# space complexity:- O(n)
+def Merge_sort(arr):
+    n = len(arr)
+    if n <= 1:   # base case
+        return arr
+    
+    mid = n // 2
+    left = Merge_sort(arr[:mid])
+    right = Merge_sort(arr[mid:])
+
+    l_len = len(left)
+    r_len = len(right)
+
+    sorted_arr = [0] * n
+    i = j = k = 0
+
+    # Merge two sorted halves
+    while i < l_len and j < r_len:
+        if left[i] < right[j]:
+            sorted_arr[k] = left[i]
+            i += 1
+        else:
+            sorted_arr[k] = right[j]
+            j += 1
+        k += 1
+
+    # Copy remaining
+    while i < l_len:
+        sorted_arr[k] = left[i]
+        i += 1
+        k += 1
+
+    while j < r_len:
+        sorted_arr[k] = right[j]
+        j += 1
+        k += 1
+
+    return sorted_arr
+
+print(f"Merge sort:- {Merge_sort(a)}")

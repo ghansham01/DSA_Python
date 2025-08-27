@@ -104,12 +104,37 @@ def Reverse_String():
 # print(f'reverse the string: {Reverse_String()}')
 
 # Check if a password is at least 8 chars long, contains a digit, uppercase, lowercase, and special character.
-def passwordChaker():
-    pass
+def passwordChaker(password):
+    length = len(password)
+    digit = any(ch.isdigit() for ch in password)
+    upper = any(ch.isupper() for ch in password)
+    lower = any(ch.islower() for ch in password)
+
+    if all([length,digit, upper, lower]):
+        return 'stronge password'
+    else:
+        return 'weak password'
+
+# pwd = input("enter ur password")
+# passwordChaker(pwd)
 
 # Randomly generate a number (1–100) and let the user guess until they get it right.
+import random
 def Randamly_Genrate():
-    pass
+    n=random.randint(1,1000)
+    a=-1
+    gasess=0
+    while(a!= n):
+        gasess+=1
+        a= int(input("Gass the number: "))
+        if(a>n):
+            print("Lower Number Please ")
+        else:
+            print("Higher Number Please ")
+
+    print(f"Your gassed the number currectly in {gasess} attempt")
+
+Randamly_Genrate()
 
 # Find the Greatest Common Divisor (GCD) of two numbers without using built-in functions.
 def GCD():
