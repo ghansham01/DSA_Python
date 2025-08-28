@@ -89,4 +89,32 @@ def Merge_sort(arr):
 
     return sorted_arr
 
-print(f"Merge sort:- {Merge_sort(a)}")
+# print(f"Merge sort:- {Merge_sort(a)}")
+
+# Quicksort
+# Time Complexity:- Best / Average Case: O(n log n) | Worst Case: O(n²)
+# Space Complexity:- O(n)
+
+class Quicksort:
+    def partion(self,arr, low , high):
+        pivot= arr[high]
+        i = low-1
+
+        for j in range(low, high):
+            if arr[j] <= pivot:
+                i+=1
+                arr[j],arr[i] =arr[i],arr[j]
+        
+        arr[i+1],arr[high] = arr[high],arr[i+1]
+        return i+1
+    
+    def quick_sort(self, arr, low, high):
+        if low < high:
+            pi =self.partion(arr, low, high)
+            self.quick_sort(arr, low, pi-1)
+            self.quick_sort(arr, pi+1, high)
+
+qs = Quicksort()
+arr = [8,6,3,5,4,6,9,4,2]
+qs.quick_sort(arr,0,len(arr)-1)
+print(f'the sorted arr is this: {arr}')
