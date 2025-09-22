@@ -5,12 +5,12 @@
 
 # Time: O(2^n), Space: O(n)
 def f(n):
-    if n==0:
-        return 0
-    elif n==1:
-        return 1
-    else:
-        return f(n-1) + f(n-2)
+  if n == 0:
+    return 0
+  elif n == 1:
+    return 1
+  else:
+    return f(n-1)+f(n-2)
     
 print(f"this is the ans of fibo:{f(12)}")
 
@@ -47,5 +47,21 @@ def reverse(node):
 reverse(Head)
 
 # reverse array
-def array_reverse():
-    pass
+def array_reverse(arr):
+  start = 0
+  end = len(arr)-1
+
+  while start < end:
+    arr[start],arr[end] = arr[end],arr[start]
+
+    start +=1
+    end -=1
+  
+  return arr
+
+arr = [10,20,30,40,50]
+print(array_reverse(arr))
+
+arr2 = [1, 2, 3, 4, 5]
+rev = list(reversed(arr2))
+print(rev)
