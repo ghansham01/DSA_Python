@@ -134,15 +134,28 @@ def Randamly_Genrate():
 
     print(f"Your gassed the number currectly in {gasess} attempt")
 
-Randamly_Genrate()
+# Randamly_Genrate()
 
 # Find the Greatest Common Divisor (GCD) of two numbers without using built-in functions.
-def GCD():
-    pass
+def GCD(x,y):
+    res = min(x,y)
+
+    while res>1:
+        if x %res==0 & y% res==0:
+            break
+        res-=1
+    
+    return 1
+
+# print(GCD(3,4))
 
 # Create a pyramid pattern of numbers up to n rows.
-def pyramid():
-    pass
+def pyramid(n):
+    for i in range(n):
+        print(" " * (n-i) + "*" * (2*i-1))
+
+print(" pyramid triangle pattern: ")
+pyramid(5)
 
 # Input two numbers and print all prime numbers between them.
 def prime_number():

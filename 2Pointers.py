@@ -1,10 +1,10 @@
 arr= [-4,-1,0,3,10]
 
-# result = [x**2 for x in arr]
-# result.sort()
-# print(result)
+result = [x**2 for x in arr]
+result.sort()
+print("in short form what we get",result)
 
-def towpointer(arr):
+def sortedSquares(arr):
     left = 0
     right = len(arr) - 1
     result = []
@@ -20,4 +20,4 @@ def towpointer(arr):
     result.reverse()
     return result
 
-print(towpointer(arr))
+print(sortedSquares(arr))

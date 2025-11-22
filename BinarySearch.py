@@ -21,3 +21,12 @@ def Search(arr, target):
 
 a = [10, 20, 30, 40, 50]
 print(Search(a,20))
+
+
+numbers = [4, 2, 7, 1, 9]
+def LinerSerch(arr, target):
+    for i in range(len(arr)):
+        if arr[i]==target:
+            return i 
+        
+print(LinerSerch(numbers, 1))
