@@ -154,24 +154,57 @@ def pyramid(n):
     for i in range(n):
         print(" " * (n-i) + "*" * (2*i-1))
 
-print(" pyramid triangle pattern: ")
-pyramid(5)
+# print(" pyramid triangle pattern: ")
+# pyramid(5)
 
 # Input two numbers and print all prime numbers between them.
-def prime_number():
-    pass
+def prime_number(n):
+    if n <= 1:
+        return False
+    elif n<=3:
+        return True
+    elif n%2 ==0 or n%3 ==0:
+        return True
+
+# print(prime_number(9)) 
 
 # Remove duplicates from a list while keeping the original order.
-def Remove_duplicate():
-    pass
+def Remove_duplicate(list):
+    result = []
+    
+    for item in list:
+        if item not in result:
+            result.append(item)
+
+    return result
+
+# list = [1, 2, 2, 3, 4, 4, 5]
+# print(Remove_duplicate(list))
 
 # For a given number, print the Collatz sequence until it reaches 1.
-def Collatz_Sequence():
-    pass
+def Collatz_Sequence(n):
+    print(n, end=" → ")
+    while n!=1:
+        if n %2 == 0:
+            n = n//2
+        else:
+            n = 3*n-1
+
+# print(Collatz_Sequence(10))
 
 # Find all palindrome numbers between 1 and 1000.
-def palindrome():
-    pass
+def palindrome(n):
+    OrgNum = n
+    reverse = 0
+
+    while n > 0:
+        digit = n%10
+        reverse = reverse *10 + digit
+        n //= 10
+    
+    return OrgNum == reverse
+
+print(palindrome(4321))
 
 # Print all Armstrong numbers between 1 and 1000.
 def All_Armstrong():
