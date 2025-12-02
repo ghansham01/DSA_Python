@@ -204,11 +204,24 @@ def palindrome(n):
     
     return OrgNum == reverse
 
-print(palindrome(4321))
+# print(palindrome(4321))
 
 # Print all Armstrong numbers between 1 and 1000.
-def All_Armstrong():
-    pass
+def All_Armstrong(limit):
+    armNUmber = []
+
+    for num in range(1, limit+1):
+        s_num = str(num)
+        power = len(s_num)
+
+        digitSum = sum(int(digit) ** power for digit in s_num)
+
+        if digitSum == num:
+            armNUmber.append(num)
+
+    return armNUmber
+
+# print(All_Armstrong(400))
 
 # Count frequency of each character in a string using loops only.
 def frequency():
@@ -219,5 +232,18 @@ def Square_matrix():
     pass
 
 # Create a right triangle star pattern, but skip printing a star if both row and column are even.
-def triangel_right():
-    pass
+def triangel_right(n):
+    for row in range(1,n+1):
+        for s in range(n-row):
+            print(" ", end="")
+        
+        for col in range(1, row+1):
+            if row%2 == 0 and col%2 == 0:
+                print(" ", end="")
+
+            else:
+                print("*", end="")
+
+        print()
+
+print(triangel_right(12))
