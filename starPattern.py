@@ -1,10 +1,10 @@
 N = int(input("enter the number"))
 
-def lefttriangle(n):
-    for i in range(n):
-        print('*'*(i+1))
+# def lefttriangle(n):
+#     for i in range(n):
+#         print('*'*(i+1))
 
-lefttriangle(N)
+# lefttriangle(N)
 
 def rightTriangle(n):
     for i in range(1, n+1):
@@ -26,9 +26,9 @@ print(" pyramid triangle pattern: ")
 pyramidTriangle(N)
 
 
-def InvertedTriangle(n):
-    for i in range(n):
-        print("*" * (n-i))
+# def InvertedTriangle(n):
+#     for i in range(n):
+#         print("*" * (n-i))
 
-print(" Inverted triangle pattern: ")
-InvertedTriangle(N)
+# print(" Inverted triangle pattern: ")
+# InvertedTriangle(N)
