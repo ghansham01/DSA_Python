@@ -57,7 +57,7 @@ def prime_num():
     else:
         print("Enter a Greater number")
 
-# print(prime_num())
+print(prime_num())
 
 # FizzBuzz Variation
 '''
@@ -246,4 +246,4 @@ def triangel_right(n):
 
         print()
 
-print(triangel_right(12))
+# print(triangel_right(12))
