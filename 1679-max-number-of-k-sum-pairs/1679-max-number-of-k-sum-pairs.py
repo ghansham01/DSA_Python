@@ -1,6 +1,6 @@
 class Solution:
     def maxOperations(self, nums: List[int], k: int) -> int:
-        nums = sorted(nums)
+        nums.sort()
         n = len(nums)
         l=0
         r=n-1
